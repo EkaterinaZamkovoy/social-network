@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Button } from "./components/button/Button";
+import { Container } from "./components/container/Container.styled";
+import { Header } from "./components/header/Header.styled";
+import { Navbar } from "./components/navbar/Navbar";
+import { Profile } from "./components/profile/Profile.styled";
 
 function App() {
+  const Items = ["Profile", "Messages", "Music", "News", "Settings"];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Container>
+        <Header />
+        <Navbar menuItems={Items} />
+        <Profile />
+      </Container>
     </div>
   );
 }
